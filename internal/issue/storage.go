@@ -1,4 +1,4 @@
-package user
+package issue
 
 import "github.com/jmoiron/sqlx"
 
@@ -12,9 +12,7 @@ type repository struct {
 }
 
 func NewRepository(conn *sqlx.DB) Repository {
-	return &repository{
-		conn: conn,
-	}
+	return &repository{conn: conn}
 }
 
 func (r *repository) Create() error {

@@ -1,7 +1,7 @@
 package issue
 
 type (
-	// Store represents store data
+	// Store represents storage data
 	Store struct {
 		Title       string
 		Description string

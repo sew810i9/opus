@@ -1,13 +1,14 @@
-package configs
+package config
 
 import (
+	_ "github.com/joho/godotenv/autoload"
 	"github.com/kelseyhightower/envconfig"
 	"log"
 )
 
 type Config struct {
-	Port            string `envconfig:"PORT"`
-	MysqlConnection string `envconfig:"MYSQL_CONNECTION"`
+	Listen   string `envconfig:"LISTEN,required"`
+	MysqlDsn string `envconfig:"MYSQL_DSN,required"`
 }
 
 func Init() *Config {
